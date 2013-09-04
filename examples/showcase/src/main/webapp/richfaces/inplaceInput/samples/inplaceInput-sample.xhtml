@@ -23,16 +23,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
-    <r:panel>
+    xmlns:rich="http://richfaces.org/rich">
+    <rich:panel>
         <f:facet name="header">
             <h:outputText value="Person Info"></h:outputText>
         </f:facet>
         <h:panelGrid columns="2">
             <h:outputText value="Name: " />
-            <r:inplaceInput defaultLabel="click to enter your name" />
+            <rich:inplaceInput defaultLabel="click to enter your name" />
             <h:outputText value="Email:" />
-            <r:inplaceInput defaultLabel="click to enter your email" />
+            <rich:inplaceInput defaultLabel="click to enter your email" />
         </h:panelGrid>
-    </r:panel>
+    </rich:panel>
 </ui:composition>

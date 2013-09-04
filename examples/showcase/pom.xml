@@ -20,7 +20,8 @@
   Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
   02110-1301 USA, or see the FSF site: http://www.fsf.org.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -38,6 +39,7 @@
 
     <properties>
         <version.richfaces>5.0.0-SNAPSHOT</version.richfaces>
+        <version.richfaces.ui>4.5.0-SNAPSHOT</version.richfaces.ui>
         <dependency.scope>compile</dependency.scope>
         <container.classifier>tomcat6</container.classifier>
         <container.resources>src/main/resources-tomcat</container.resources>
@@ -77,10 +79,100 @@
     </dependencyManagement>
 
     <dependencies>
+<!--         <dependency> -->
+<!--             <groupId>org.richfaces</groupId> -->
+<!--             <artifactId>richfaces</artifactId> -->
+<!--         </dependency> -->
         <dependency>
-            <groupId>org.richfaces</groupId>
-            <artifactId>richfaces</artifactId>
-        </dependency>
+                <groupId>org.richfaces.ui.common</groupId>
+                <artifactId>richfaces-ui-common-api</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.common</groupId>
+                <artifactId>richfaces-ui-common-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.core</groupId>
+                <artifactId>richfaces-ui-core-api</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.core</groupId>
+                <artifactId>richfaces-ui-core-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.iteration</groupId>
+                <artifactId>richfaces-ui-iteration-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.iteration</groupId>
+                <artifactId>richfaces-ui-iteration-api</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.output</groupId>
+                <artifactId>richfaces-ui-output-api</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.output</groupId>
+                <artifactId>richfaces-ui-output-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.misc</groupId>
+                <artifactId>richfaces-ui-misc-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.input</groupId>
+                <artifactId>richfaces-ui-input-api</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.input</groupId>
+                <artifactId>richfaces-ui-input-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.validator</groupId>
+                <artifactId>richfaces-ui-validator-api</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.validator</groupId>
+                <artifactId>richfaces-ui-validator-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.dnd</groupId>
+                <artifactId>richfaces-ui-dnd-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui.dnd</groupId>
+                <artifactId>richfaces-ui-dnd-api</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui</groupId>
+                <artifactId>richfaces-components-api</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui</groupId>
+                <artifactId>richfaces-components-ui</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.richfaces.ui</groupId>
+                <artifactId>static-resources</artifactId>
+                <version>${version.richfaces.ui}</version>
+            </dependency>
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
             <artifactId>jboss-servlet-api_3.0_spec</artifactId>
@@ -139,10 +231,10 @@
             <type>pom</type>
         </dependency>
         <dependency>
-        <groupId>org.jboss.spec.javax.jms</groupId>
-        <artifactId>jboss-jms-api_1.1_spec</artifactId>
+            <groupId>org.jboss.spec.javax.jms</groupId>
+            <artifactId>jboss-jms-api_1.1_spec</artifactId>
             <scope>${dependency.scope}</scope>
-      </dependency>
+        </dependency>
         <dependency>
             <groupId>org.hornetq</groupId>
             <artifactId>hornetq-core</artifactId>

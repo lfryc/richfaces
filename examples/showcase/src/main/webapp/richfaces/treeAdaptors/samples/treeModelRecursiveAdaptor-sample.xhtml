@@ -23,18 +23,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich">
 
     <h:form>
-        <r:tree toggleType="ajax" var="item">
-            <r:treeModelRecursiveAdaptor roots="#{fileSystemBean.sourceRoots}" nodes="#{item.directories}">
-                <r:treeNode>
+        <rich:tree toggleType="ajax" var="item">
+            <rich:treeModelRecursiveAdaptor roots="#{fileSystemBean.sourceRoots}" nodes="#{item.directories}">
+                <rich:treeNode>
                     #{item.shortPath}
-                </r:treeNode>
-                <r:treeModelAdaptor nodes="#{item.files}">
-                    <r:treeNode>#{item}</r:treeNode>
-                </r:treeModelAdaptor>
-            </r:treeModelRecursiveAdaptor>
-        </r:tree>
+                </rich:treeNode>
+                <rich:treeModelAdaptor nodes="#{item.files}">
+                    <rich:treeNode>#{item}</rich:treeNode>
+                </rich:treeModelAdaptor>
+            </rich:treeModelRecursiveAdaptor>
+        </rich:tree>
     </h:form>
 </ui:composition>

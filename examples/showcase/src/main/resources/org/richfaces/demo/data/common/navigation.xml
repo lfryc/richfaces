@@ -30,7 +30,7 @@
         <demos>
             <demo>
                 <id>ajax</id>
-                <name>r:ajax</name>
+                <name>rich:ajax</name>
                 <samples>
                     <sample>
                         <id>ajax</id>
@@ -44,7 +44,7 @@
             </demo>
             <demo>
                 <id>commandButton</id>
-                <name>r:commandButton</name>
+                <name>rich:commandButton</name>
                 <samples>
                     <sample>
                         <id>commandButton</id>
@@ -54,7 +54,7 @@
             </demo>
             <demo>
                 <id>commandLink</id>
-                <name>r:commandLink</name>
+                <name>rich:commandLink</name>
                 <samples>
                     <sample>
                         <id>commandLink</id>
@@ -64,7 +64,7 @@
             </demo>
             <demo>
                 <id>actionListener</id>
-                <name>r:actionListener</name>
+                <name>rich:actionListener</name>
                 <samples>
                     <sample>
                         <id>actionListener</id>
@@ -74,7 +74,7 @@
             </demo>
             <demo>
                 <id>jsFunction</id>
-                <name>r:jsFunction</name>
+                <name>rich:jsFunction</name>
                 <samples>
                     <sample>
                         <id>jsFunction</id>
@@ -84,7 +84,7 @@
             </demo>
             <demo>
                 <id>poll</id>
-                <name>r:poll</name>
+                <name>rich:poll</name>
                 <samples>
                     <sample>
                         <id>poll</id>
@@ -94,7 +94,7 @@
             </demo>
             <demo enabled="#{pushConfiguration.pushEnabled}">
                 <id>push</id>
-                <name>r:push</name>
+                <name>rich:push</name>
                 <samples>
                     <sample enabled="#{pushConfiguration.jmsEnabled}">
                         <id>pushJms</id>
@@ -112,7 +112,7 @@
             </demo>
             <demo>
                 <id>param</id>
-                <name>r:param</name>
+                <name>rich:param</name>
                 <samples>
                     <sample>
                         <id>param</id>
@@ -135,7 +135,7 @@
         <demos>
             <demo>
                 <id>queue</id>
-                <name>r:queue</name>
+                <name>rich:queue</name>
                 <samples>
                     <sample>
                         <id>queue</id>
@@ -145,7 +145,7 @@
             </demo>
             <demo>
                 <id>attachQueue</id>
-                <name>r:attachQueue</name>
+                <name>rich:attachQueue</name>
                 <samples>
                     <sample>
                         <id>attachQueue</id>
@@ -160,7 +160,7 @@
         <demos>
             <demo>
                 <id>outputPanel</id>
-                <name>r:outputPanel</name>
+                <name>rich:outputPanel</name>
                 <samples>
                     <sample>
                         <id>simple</id>
@@ -174,7 +174,7 @@
             </demo>
             <demo>
                 <id>status</id>
-                <name>r:status</name>
+                <name>rich:status</name>
                 <samples>
                     <sample>
                         <id>viewUsage</id>
@@ -192,7 +192,7 @@
             </demo>
             <demo>
                 <id>region</id>
-                <name>r:region</name>
+                <name>rich:region</name>
                 <samples>
                     <sample>
                         <id>region</id>
@@ -202,7 +202,7 @@
             </demo>
             <demo>
                 <id>mediaOutput</id>
-                <name>r:mediaOutput</name>
+                <name>rich:mediaOutput</name>
                 <samples>
                     <sample>
                         <id>imgUsage</id>
@@ -212,7 +212,7 @@
             </demo>
             <demo>
                 <id>log</id>
-                <name>r:log</name>
+                <name>rich:log</name>
                 <samples>
                     <sample>
                         <id>log</id>
@@ -241,7 +241,7 @@
             </demo>
             <demo>
                 <id>graphValidator</id>
-                <name>r:graphValidator</name>
+                <name>rich:graphValidator</name>
                 <samples>
                     <sample>
                         <id>passwordValidation</id>
@@ -251,27 +251,27 @@
             </demo>
             <demo>
                 <id>message</id>
-                <name>r:message</name>
+                <name>rich:message</name>
                 <samples>
                     <sample>
                         <id>message</id>
-                        <name>Simple r:message sample</name>
+                        <name>Simple rich:message sample</name>
                     </sample>
                 </samples>
             </demo>
             <demo>
                 <id>messages</id>
-                <name>r:messages</name>
+                <name>rich:messages</name>
                 <samples>
                     <sample>
                         <id>messages</id>
-                        <name>Simple r:messages sample</name>
+                        <name>Simple rich:messages sample</name>
                     </sample>
                 </samples>
             </demo>
             <demo mobileExclude="true">
                 <id>notify</id>
-                <name>r:notify</name>
+                <name>rich:notify</name>
                 <samples>
                     <sample>
                         <id>notifyMessages</id>
@@ -294,7 +294,7 @@
         <demos>
             <demo>
                 <id>repeat</id>
-                <name>r:repeat</name>
+                <name>rich:repeat</name>
                 <samples>
                     <sample>
                         <id>simpleGrid</id>
@@ -304,7 +304,7 @@
             </demo>
             <demo>
                 <id>dataTable</id>
-                <name>r:dataTable</name>
+                <name>rich:dataTable</name>
                 <samples>
                     <sample>
                         <id>simpleTable</id>
@@ -341,7 +341,7 @@
             </demo>
             <demo mobileExclude="true">
                 <id>extendedDataTable</id>
-                <name>r:extendedDataTable</name>
+                <name>rich:extendedDataTable</name>
                 <samples>
                     <sample>
                         <id>simpleTable</id>
@@ -367,17 +367,17 @@
             </demo>
             <demo>
                 <id>subTableToggleControl</id>
-                <name>r:collapsibleSubTable</name>
+                <name>rich:collapsibleSubTable</name>
                 <samples>
                     <sample>
                         <id>subTableToggleControl</id>
-                        <name>r:collapsibleSubTable Basic Usage</name>
+                        <name>rich:collapsibleSubTable Basic Usage</name>
                     </sample>
                 </samples>
             </demo>
             <demo>
                 <id>dataScroller</id>
-                <name>r:dataScroller</name>
+                <name>rich:dataScroller</name>
                 <samples>
                     <sample>
                         <id>simpleScrolling</id>
@@ -391,7 +391,7 @@
             </demo>
             <demo>
                 <id>list</id>
-                <name>r:list</name>
+                <name>rich:list</name>
                 <samples>
                     <sample>
                         <id>lists</id>
@@ -401,7 +401,7 @@
             </demo>
             <demo>
                 <id>dataGrid</id>
-                <name>r:dataGrid</name>
+                <name>rich:dataGrid</name>
                 <samples>
                     <sample>
                         <id>grid</id>
@@ -416,7 +416,7 @@
         <demos>
             <demo>
                 <id>tree</id>
-                <name>r:tree</name>
+                <name>rich:tree</name>
                 <samples>
                     <sample>
                         <id>tree</id>
@@ -441,7 +441,7 @@
         <demos>
             <demo>
                 <id>panel</id>
-                <name>r:panel</name>
+                <name>rich:panel</name>
                 <samples>
                     <sample>
                         <id>simple</id>
@@ -455,7 +455,7 @@
             </demo>
             <demo>
                 <id>togglePanel</id>
-                <name>r:togglePanel</name>
+                <name>rich:togglePanel</name>
                 <samples>
                     <sample>
                         <id>simple</id>
@@ -473,7 +473,7 @@
             </demo>
             <demo>
                 <id>tabPanel</id>
-                <name>r:tabPanel</name>
+                <name>rich:tabPanel</name>
                 <samples>
                     <sample>
                         <id>simple</id>
@@ -496,7 +496,7 @@
             </demo>
             <demo>
                 <id>collapsiblePanel</id>
-                <name>r:collapsiblePanel</name>
+                <name>rich:collapsiblePanel</name>
                 <samples>
                     <sample>
                         <id>simple</id>
@@ -506,7 +506,7 @@
             </demo>
             <demo>
                 <id>accordion</id>
-                <name>r:accordion</name>
+                <name>rich:accordion</name>
                 <samples>
                     <sample>
                         <id>simple</id>
@@ -520,7 +520,7 @@
             </demo>
             <demo mobileExclude="true">
                 <id>popup</id>
-                <name>r:popupPanel</name>
+                <name>rich:popupPanel</name>
                 <samples>
                     <sample>
                         <id>simplePopup</id>
@@ -538,7 +538,7 @@
             </demo>
             <demo>
                 <id>progressBar</id>
-                <name>r:progressBar</name>
+                <name>rich:progressBar</name>
                 <samples>
                     <sample>
                         <id>ajaxProgressBar</id>
@@ -552,7 +552,7 @@
             </demo>
             <demo mobileExclude="true">
                 <id>tooltip</id>
-                <name>r:tooltip</name>
+                <name>rich:tooltip</name>
                 <samples>
                     <sample>
                         <id>tooltip</id>
@@ -567,7 +567,7 @@
         <demos>
             <demo>
                 <id>panelMenu</id>
-                <name>r:panelMenu</name>
+                <name>rich:panelMenu</name>
                 <samples>
                     <sample>
                         <id>panelMenu</id>
@@ -577,7 +577,7 @@
             </demo>
             <demo>
                 <id>toolBar</id>
-                <name>r:toolbar</name>
+                <name>rich:toolbar</name>
                 <samples>
                     <sample>
                         <id>toolBar</id>
@@ -591,7 +591,7 @@
             </demo>
             <demo>
                 <id>contextMenu</id>
-                <name>r:contextMenu</name>
+                <name>rich:contextMenu</name>
                 <samples>
                     <sample>
                         <id>simple</id>
@@ -609,7 +609,7 @@
             </demo>
             <demo>
                 <id>dropDownMenu</id>
-                <name>r:dropDownMenu</name>
+                <name>rich:dropDownMenu</name>
                 <samples>
                     <sample>
                         <id>topMenu</id>
@@ -628,7 +628,7 @@
         <demos>
             <demo>
                 <id>autocomplete</id>
-                <name>r:autocomplete</name>
+                <name>rich:autocomplete</name>
                 <samples>
                     <sample>
                         <id>modes</id>
@@ -646,7 +646,7 @@
             </demo>
             <demo>
                 <id>calendar</id>
-                <name>r:calendar</name>
+                <name>rich:calendar</name>
                 <samples>
                     <sample>
                         <id>calendar</id>
@@ -664,7 +664,7 @@
             </demo>
             <demo mobileExclude="true">
                 <id>editor</id>
-                <name>r:editor</name>
+                <name>rich:editor</name>
                 <samples>
                     <sample>
                         <id>autosaving</id>
@@ -682,7 +682,7 @@
             </demo>
             <demo>
                 <id>inputNumberSlider</id>
-                <name>r:inputNumberSlider</name>
+                <name>rich:inputNumberSlider</name>
                 <samples>
                     <sample>
                         <id>sliders</id>
@@ -692,7 +692,7 @@
             </demo>
             <demo>
                 <id>inputNumberSpinner</id>
-                <name>r:inputNumberSpinner</name>
+                <name>rich:inputNumberSpinner</name>
                 <samples>
                     <sample>
                         <id>spinners</id>
@@ -702,7 +702,7 @@
             </demo>
             <demo>
                 <id>inplaceInput</id>
-                <name>r:inplaceInput</name>
+                <name>rich:inplaceInput</name>
                 <samples>
                     <sample>
                         <id>inplaceInput</id>
@@ -712,7 +712,7 @@
             </demo>
             <demo>
                 <id>fileUpload</id>
-                <name>r:fileUpload</name>
+                <name>rich:fileUpload</name>
                 <samples>
                     <sample>
                         <id>imgUpload</id>
@@ -727,7 +727,7 @@
         <demos>
             <demo>
                 <id>inplaceSelect</id>
-                <name>r:inplaceSelect</name>
+                <name>rich:inplaceSelect</name>
                 <samples>
                     <sample>
                         <id>inplaceSelect</id>
@@ -737,7 +737,7 @@
             </demo>
             <demo>
                 <id>select</id>
-                <name>r:select</name>
+                <name>rich:select</name>
                 <samples>
                     <sample>
                         <id>select</id>
@@ -747,7 +747,7 @@
             </demo>
             <demo>
                 <id>orderingList</id>
-                <name>r:orderingList</name>
+                <name>rich:orderingList</name>
                 <samples>
                     <sample>
                         <id>orderingList</id>
@@ -757,7 +757,7 @@
             </demo>
             <demo>
                 <id>pickList</id>
-                <name>r:pickList</name>
+                <name>rich:pickList</name>
                 <samples>
                     <sample>
                         <id>pickList</id>
@@ -843,7 +843,7 @@
             </demo>
             <demo>
                 <id>componentControl</id>
-                <name>r:componentControl</name>
+                <name>rich:componentControl</name>
                 <samples>
                     <sample>
                         <id>tableFilteringAPI</id>
@@ -853,17 +853,17 @@
             </demo>
             <demo mobileExclude="true">
                 <id>hashParam</id>
-                <name>r:hashParam</name>
+                <name>rich:hashParam</name>
                 <samples>
                     <sample>
                         <id>hashOptionsPopup</id>
-                        <name>Passing hash options to r:popupPanel</name>
+                        <name>Passing hash options to rich:popupPanel</name>
                     </sample>
                 </samples>
             </demo>
             <demo mobileExclude="true">
                 <id>hotKey</id>
-                <name>r:hotKey</name>
+                <name>rich:hotKey</name>
                 <samples>
                     <sample>
                         <id>pickListHotKeys</id>
@@ -873,7 +873,7 @@
             </demo>
             <demo mobileExclude="true">
                 <id>jquery</id>
-                <name>r:jQuery</name>
+                <name>rich:jQuery</name>
                 <samples>
                     <sample>
                         <id>jquery</id>

@@ -23,22 +23,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
     <h:form>
-        <r:panel>
+        <rich:panel>
             <h:panelGrid columns="2">
-                <r:commandButton value="Set Name to Alex" render="rep">
-                    <r:param value="Alex" assignTo="#{userBean.name}" />
-                </r:commandButton>
+                <a4j:commandButton value="Set Name to Alex" render="rep">
+                    <a4j:param value="Alex" assignTo="#{userBean.name}" />
+                </a4j:commandButton>
 
-                <r:commandButton value="Set Name to John" render="rep">
-                    <r:param value="John" assignTo="#{userBean.name}" />
-                </r:commandButton>
+                <a4j:commandButton value="Set Name to John" render="rep">
+                    <a4j:param value="John" assignTo="#{userBean.name}" />
+                </a4j:commandButton>
             </h:panelGrid>
-        </r:panel>
+        </rich:panel>
         <br />
-        <r:panel>
+        <rich:panel>
             <h:outputText id="rep" value="Selected Name:#{userBean.name}" />
-        </r:panel>
+        </rich:panel>
     </h:form>
 </ui:composition>

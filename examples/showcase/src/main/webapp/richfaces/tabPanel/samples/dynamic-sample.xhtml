@@ -23,21 +23,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
 
     <h:form>
     
-        <r:tabPanel activeItem="#{dynamicPanelBean.activeTab}">
+        <rich:tabPanel activeItem="#{dynamicPanelBean.activeTab}">
         
-            <r:tab header="Static">
+            <rich:tab header="Static">
                 <p>This tab is static one.</p>
                 
-                <p>All of the following tabs are dynamically generated using <b>r:repeat</b>.</p> 
-            </r:tab>
+                <p>All of the following tabs are dynamically generated using <b>rich:repeat</b>.</p> 
+            </rich:tab>
             
-            <r:repeat value="#{skinBean.skins}" var="skinName">
+            <a4j:repeat value="#{skinBean.skins}" var="skinName">
             
-                <r:tab header="#{skinName}" name="#{skinName}">
+                <rich:tab header="#{skinName}" name="#{skinName}">
                     <f:facet name="header">#{skinName}</f:facet>
 
                     <i> All the controls below are just standard JSF components skinned with RichFaces: </i>
@@ -60,8 +60,8 @@
                         <f:param name="skin" value="#{skinName}" />
                     </h:commandButton>
                     
-                </r:tab>
-            </r:repeat>
-        </r:tabPanel>
+                </rich:tab>
+            </a4j:repeat>
+        </rich:tabPanel>
     </h:form>
 </ui:composition>

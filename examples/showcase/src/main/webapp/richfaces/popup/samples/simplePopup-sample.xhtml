@@ -23,16 +23,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich">
     <h:commandButton value="Call the popup">
-        <r:componentControl target="popup" operation="show" />
+        <rich:componentControl target="popup" operation="show" />
     </h:commandButton>
-    <r:popupPanel id="popup" modal="false" autosized="true" resizeable="false">
+    <rich:popupPanel id="popup" modal="false" autosized="true" resizeable="false">
         <f:facet name="header">
             <h:outputText value="Simple popup panel" />
         </f:facet>
         <f:facet name="controls">
-            <h:outputLink value="#" onclick="#{r:component('popup')}.hide(); return false;">
+            <h:outputLink value="#" onclick="#{rich:component('popup')}.hide(); return false;">
                 X
             </h:outputLink>
         </f:facet>
@@ -40,8 +40,8 @@
 
         <p>
             The popup panel is open and closed from the javascript function of component client side object. The following code
-            <a href="#" onclick="#{r:component('popup')}.hide()">hide this panel</a>:
-            <f:verbatim>&#35;</f:verbatim>{r:component('popup')}.hide()
+            <a href="#" onclick="#{rich:component('popup')}.hide()">hide this panel</a>:
+            <f:verbatim>&#35;</f:verbatim>{rich:component('popup')}.hide()
         </p>
-    </r:popupPanel>
+    </rich:popupPanel>
 </ui:composition>

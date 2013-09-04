@@ -23,61 +23,61 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich">
     <h:form>
-        <r:dataTable value="#{carsBean.inventoryVendorLists}" var="list">
+        <rich:dataTable value="#{carsBean.inventoryVendorLists}" var="list">
             <f:facet name="header">
-                <r:columnGroup>
-                    <r:column colspan="6">
+                <rich:columnGroup>
+                    <rich:column colspan="6">
                         <h:outputText value="Cars marketplace" />
-                    </r:column>
-                    <r:column breakRowBefore="true">
+                    </rich:column>
+                    <rich:column breakRowBefore="true">
                         <h:outputText value="Model" />
-                    </r:column>
-                    <r:column>
+                    </rich:column>
+                    <rich:column>
                         <h:outputText value="Price" />
-                    </r:column>
-                    <r:column>
+                    </rich:column>
+                    <rich:column>
                         <h:outputText value="Mileage" />
-                    </r:column>
-                    <r:column>
+                    </rich:column>
+                    <rich:column>
                         <h:outputText value="VIN Code" />
-                    </r:column>
-                    <r:column>
+                    </rich:column>
+                    <rich:column>
                         <h:outputText value="Items stock" />
-                    </r:column>
-                    <r:column>
+                    </rich:column>
+                    <rich:column>
                         <h:outputText value="Days Live" />
-                    </r:column>
-                </r:columnGroup>
+                    </rich:column>
+                </rich:columnGroup>
             </f:facet>
-            <r:column colspan="6">
-                <r:collapsibleSubTableToggler for="sbtbl" />
+            <rich:column colspan="6">
+                <rich:collapsibleSubTableToggler for="sbtbl" />
                 <h:outputText value="#{list.vendor}" />
-            </r:column>
-            <r:collapsibleSubTable value="#{list.vendorItems}" var="item" id="sbtbl" expandMode="client">
-                <r:column>
+            </rich:column>
+            <rich:collapsibleSubTable value="#{list.vendorItems}" var="item" id="sbtbl" expandMode="client">
+                <rich:column>
                     <h:outputText value="#{item.model}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <h:outputText value="#{item.price}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <h:outputText value="#{item.mileage}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <h:outputText value="#{item.vin}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <h:outputText value="#{item.stock}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <h:outputText value="#{item.daysLive}" />
-                </r:column>
+                </rich:column>
                 <f:facet name="footer">
                     <h:outputText value="Total of #{list.vendor} Cars: #{list.count}" />
                 </f:facet>
-            </r:collapsibleSubTable>
-        </r:dataTable>
+            </rich:collapsibleSubTable>
+        </rich:dataTable>
     </h:form>
 </ui:composition>

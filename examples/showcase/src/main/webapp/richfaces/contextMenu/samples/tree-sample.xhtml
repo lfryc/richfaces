@@ -25,7 +25,7 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
                 
-                xmlns:r="http://richfaces.org">
+                xmlns:rich="http://richfaces.org/rich">
     <h:outputStylesheet>
         .top {
             vertical-align: top;
@@ -37,31 +37,31 @@
         }
     </h:outputStylesheet>
     <h:form id="form">
-        <r:tree id="tree" nodeType="#{node.type}" var="node" value="#{treeBean.rootNodes}" toggleType="client"
+        <rich:tree id="tree" nodeType="#{node.type}" var="node" value="#{treeBean.rootNodes}" toggleType="client"
                    selectionType="ajax" selectionChangeListener="#{treeBean.selectionChanged}">
-            <r:treeNode type="country">
+            <rich:treeNode type="country">
                 #{node.name}
-            </r:treeNode>
-            <r:treeNode type="company" iconExpanded="/images/tree/disc.gif" iconCollapsed="/images/tree/disc.gif">
+            </rich:treeNode>
+            <rich:treeNode type="company" iconExpanded="/images/tree/disc.gif" iconCollapsed="/images/tree/disc.gif">
                 #{node.name}
-            </r:treeNode>
-            <r:treeNode type="cd" iconLeaf="/images/tree/song.gif">
+            </rich:treeNode>
+            <rich:treeNode type="cd" iconLeaf="/images/tree/song.gif">
                 #{node.artist} - #{node.name} - #{node.year}
-            </r:treeNode>
-        </r:tree>
+            </rich:treeNode>
+        </rich:tree>
 
-        <r:contextMenu target="tree" mode="ajax">
-            <r:menuItem label="View" render="popupContent" oncomplete="#{r:component('popup')}.show()"
+        <rich:contextMenu target="tree" mode="ajax">
+            <rich:menuItem label="View" render="popupContent" oncomplete="#{rich:component('popup')}.show()"
                            mode="ajax" icon="/images/icons/open.gif"/>
-        </r:contextMenu>
+        </rich:contextMenu>
     </h:form>
 
-    <r:popupPanel id="popup" modal="true" autosized="true" resizeable="false" width="200">
+    <rich:popupPanel id="popup" modal="true" autosized="true" resizeable="false" width="200">
         <f:facet name="header">
             <h:outputText value="Selection details"/>
         </f:facet>
         <f:facet name="controls">
-            <h:outputLink value="#" onclick="#{r:component('popup')}.hide(); return false;">X</h:outputLink>
+            <h:outputLink value="#" onclick="#{rich:component('popup')}.hide(); return false;">X</h:outputLink>
         </f:facet>
         <h:panelGroup id="popupContent">
             <h:outputText value="Name: " style="font-weight: bold"/>
@@ -86,7 +86,7 @@
                 </fieldset>
             </h:panelGroup>
             <br/>
-            <h:button value="Close" onclick="#{r:component('popup')}.hide(); return false;"/>
+            <h:button value="Close" onclick="#{rich:component('popup')}.hide(); return false;"/>
         </h:panelGroup>
-    </r:popupPanel>
+    </rich:popupPanel>
 </ui:composition>

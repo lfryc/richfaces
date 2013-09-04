@@ -23,41 +23,41 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
     <h:form>
-        <r:panel>
+        <rich:panel>
             <f:facet name="header">
                 <h:panelGroup>
                     <h:outputText value="User information" />
-                    <r:status>
+                    <a4j:status>
                         <f:facet name="start">
                             <h:graphicImage value="/images/ai.gif" alt="ai" style="height:12px;width:12px;" />
                         </f:facet>
-                    </r:status>
+                    </a4j:status>
                 </h:panelGroup>
             </f:facet>
             <h:panelGrid columns="3">
                 <h:outputText value="Name:" />
                 <h:inputText value="#{validationBean.name}" id="name">
-                    <r:validator />
+                    <rich:validator />
                 </h:inputText>
-                <r:message for="name" />
+                <rich:message for="name" />
                 <h:outputText value="Email" />
                 <h:inputText value="#{validationBean.email}" id="email" validatorMessage="bad email">
-                    <r:validator />
+                    <rich:validator />
                 </h:inputText>
-                <r:message for="email" />
+                <rich:message for="email" />
                 <h:outputText value="Age" />
                 <h:inputText value="#{validationBean.age}" id="age">
-                    <r:validator />
+                    <rich:validator />
                 </h:inputText>
-                <r:message for="age" />
+                <rich:message for="age" />
                 <h:outputText value="I agree the terms" />
                 <h:selectBooleanCheckbox value="#{validationBean.agreed}" id="agreed">
-                    <r:validator />
+                    <rich:validator />
                 </h:selectBooleanCheckbox>
-                <r:message for="agreed" />
+                <rich:message for="agreed" />
             </h:panelGrid>
-        </r:panel>
+        </rich:panel>
     </h:form>
 </ui:composition>

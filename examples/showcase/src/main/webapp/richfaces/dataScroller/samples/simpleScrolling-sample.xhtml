@@ -23,7 +23,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich">
     <h:outputStylesheet>
         .rf-dt{
         width:400px;
@@ -34,40 +34,40 @@
     </h:outputStylesheet>
     <h:form id="form">
         <h:panelGrid columnClasses="acent">
-            <r:dataScroller for="table" maxPages="5" />
-            <r:dataTable value="#{carsBean.allInventoryItems}" var="car" id="table" rows="10">
-                <r:column accept="#{carsFiteringBean.acceptVendor}">
+            <rich:dataScroller for="table" maxPages="5" />
+            <rich:dataTable value="#{carsBean.allInventoryItems}" var="car" id="table" rows="10">
+                <rich:column accept="#{carsFiteringBean.acceptVendor}">
                     <f:facet name="header">
                         <h:outputText value="Vendor " />
                     </f:facet>
                     <h:outputText value="#{car.vendor}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Model" />
                     </f:facet>
                     <h:outputText value="#{car.model}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Price" />
                     </f:facet>
                     <h:outputText value="#{car.price}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Mileage" />
                     </f:facet>
                     <h:outputText value="#{car.mileage}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="VIN " />
                     </f:facet>
                     <h:outputText value="#{car.vin}" />
-                </r:column>
-            </r:dataTable>
-            <r:dataScroller for="table" maxPages="5" />
+                </rich:column>
+            </rich:dataTable>
+            <rich:dataScroller for="table" maxPages="5" />
         </h:panelGrid>
     </h:form>
 </ui:composition>

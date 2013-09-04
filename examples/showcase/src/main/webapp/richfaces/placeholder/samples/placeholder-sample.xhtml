@@ -23,26 +23,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich">
 
 
-    <r:panel header="Placeholder">
+    <rich:panel header="Placeholder">
         <h:panelGrid columns="2">
             <h:outputLabel value="Input text:" />
             <h:inputText id="input">
-                <r:placeholder value="Type text here..." />
+                <rich:placeholder value="Type text here..." />
             </h:inputText>
     
             <h:outputLabel value="Textarea:" />
             <h:inputTextarea id="textarea">
-                <r:placeholder value="A space for long content..." />
+                <rich:placeholder value="A space for long content..." />
             </h:inputTextarea>
     
             <h:outputLabel value="Date:" />
-            <r:calendar datePattern="dd/M/yyyy" enableManualInput="true">
-                <r:placeholder value="dd/mm/yyyy" />
-            </r:calendar>
+            <rich:calendar datePattern="dd/M/yyyy" enableManualInput="true">
+                <rich:placeholder value="dd/mm/yyyy" />
+            </rich:calendar>
         </h:panelGrid>
-    </r:panel>
+    </rich:panel>
 
 </ui:composition>

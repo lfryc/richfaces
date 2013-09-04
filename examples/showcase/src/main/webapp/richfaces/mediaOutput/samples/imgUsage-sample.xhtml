@@ -23,7 +23,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
     <h:form>
         <h:panelGrid columns="6">
             <h:outputText value="Color 1" />
@@ -51,10 +51,10 @@
                 <f:selectItem itemLabel="Blue" itemValue="4" />
             </h:selectOneMenu>
             <f:facet name="footer">
-                <r:commandButton value="Process the image" render="img" execute="@form" />
+                <a4j:commandButton value="Process the image" render="img" execute="@form" />
             </f:facet>
         </h:panelGrid>
-        <r:mediaOutput element="img" cacheable="false" session="true" id="img" createContent="#{mediaBean.process}"
+        <a4j:mediaOutput element="img" cacheable="false" session="true" id="img" createContent="#{mediaBean.process}"
             value="#{mediaData}" mimeType="image/jpeg" alt="img" />
     </h:form>
 </ui:composition>

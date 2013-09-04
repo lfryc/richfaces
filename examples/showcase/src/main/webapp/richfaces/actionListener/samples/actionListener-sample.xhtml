@@ -23,21 +23,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
     <h:form id="form">
         <h:panelGrid columns="3">
             <h:commandButton value="Invoke listener method">
-                <r:actionListener listener="#{actionListenerBean.handleActionMethod}"/>
+                <a4j:actionListener listener="#{actionListenerBean.handleActionMethod}"/>
                 <f:ajax render="messages"/>
             </h:commandButton>
 
             <h:commandButton value="Invoke listener by type">
-                <r:actionListener type="org.richfaces.demo.actionListener.ActionListenerBean$ActionListenerImpl"/>
+                <a4j:actionListener type="org.richfaces.demo.actionListener.ActionListenerBean$ActionListenerImpl"/>
                 <f:ajax render="messages"/>
             </h:commandButton>
 
             <h:commandButton value="Invoke listener by binding">
-                <r:actionListener binding="#{actionListenerBean.actionListener}"/>
+                <a4j:actionListener binding="#{actionListenerBean.actionListener}"/>
                 <f:ajax render="messages"/>
             </h:commandButton>
 

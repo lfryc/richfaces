@@ -148,10 +148,10 @@
                         try{
                         //after location changes, call this method supplied in config
                         //if using RichFaces, this would be the method name supplied in the
-                        //r:jsFunction component...
+                        //rich:jsFunction component...
                         callback(param1, param2);
                         }catch(e){
-                           alert('you must define an r:jsFunction component with name=' + callback)
+                           alert('you must define an rich:jsFunction component with name=' + callback)
                         }
                     }else{
                         //attempt to slide to a page id if not using a callback

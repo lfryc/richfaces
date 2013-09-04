@@ -22,26 +22,26 @@
 
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
 
     <div style="position: relative; height: 140px">
         <h:panelGrid rowClasses="s1row" columns="3" columnClasses="wfcol1,wfcol2,wfcol3">
             <h:outputText value="First Name:" />
             <h:inputText id="fn" value="#{profile.firstName}" label="First Name" required="true" />
-            <r:message for="fn" />
+            <rich:message for="fn" />
 
             <h:outputText value="Last Name:" />
             <h:inputText id="ln" value="#{profile.lastName}" label="Last Name" required="true" />
-            <r:message for="ln" />
+            <rich:message for="ln" />
 
             <h:outputText value="Company:" />
             <h:inputText id="comp" value="#{profile.company}" label="Company" required="true" />
-            <r:message for="comp" />
+            <rich:message for="comp" />
         </h:panelGrid>
         <div class="navPanel" style="width: 100%;">
-            <r:commandButton style="float:right" value="Next &gt;&gt;">
-                <r:toggleControl targetItem="@next" event="click" />
-            </r:commandButton>
+            <a4j:commandButton style="float:right" value="Next &gt;&gt;">
+                <rich:toggleControl targetItem="@next" event="click" />
+            </a4j:commandButton>
         </div>
     </div>
 </ui:composition>

@@ -25,7 +25,8 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
                 
-                xmlns:r="http://richfaces.org">
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:a4j="http://richfaces.org/a4j">
     <h:panelGrid columns="2">
         <h:form>
             <fieldset style="margin-bottom: 10px;">
@@ -36,68 +37,68 @@
                     <f:selectItem itemLabel="Single" itemValue="single"/>
                     <f:selectItem itemLabel="Multiple" itemValue="multiple"/>
                     <f:selectItem itemLabel="Multiple Keyboard-free" itemValue="multipleKeyboardFree"/>
-                    <r:ajax render="table, res"/>
+                    <a4j:ajax render="table, res"/>
                 </h:selectOneRadio>
             </fieldset>
-            <r:extendedDataTable value="#{extTableSelectionBean.inventoryItems}" var="car"
+            <rich:extendedDataTable value="#{extTableSelectionBean.inventoryItems}" var="car"
                                     selection="#{extTableSelectionBean.selection}" id="table" frozenColumns="2"
                                     style="height:300px; width:500px;"
                                     selectionMode="#{extTableSelectionBean.selectionMode}">
-                <r:ajax execute="@form" event="selectionchange" listener="#{extTableSelectionBean.selectionListener}"
+                <a4j:ajax execute="@form" event="selectionchange" listener="#{extTableSelectionBean.selectionListener}"
                           render=":res"/>
                 <f:facet name="header">
                     <h:outputText value="Cars marketplace"/>
                 </f:facet>
-                <r:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="vendor"/>
                     </f:facet>
                     <h:outputText value="#{car.vendor}"/>
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Model"/>
                     </f:facet>
                     <h:outputText value="#{car.model}"/>
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Price"/>
                     </f:facet>
                     <h:outputText value="#{car.price}"/>
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Mileage"/>
                     </f:facet>
                     <h:outputText value="#{car.mileage}"/>
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="VIN Code"/>
                     </f:facet>
                     <h:outputText value="#{car.vin}"/>
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Items stock"/>
                     </f:facet>
                     <h:outputText value="#{car.stock}"/>
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Days Live"/>
                     </f:facet>
                     <h:outputText value="#{car.daysLive}"/>
-                </r:column>
-            </r:extendedDataTable>
+                </rich:column>
+            </rich:extendedDataTable>
         </h:form>
-        <r:outputPanel id="res">
-            <r:panel header="Selected Rows:" rendered="#{not empty extTableSelectionBean.selectionItems}">
-                <r:list type="unordered" value="#{extTableSelectionBean.selectionItems}" var="sel">
+        <a4j:outputPanel id="res">
+            <rich:panel header="Selected Rows:" rendered="#{not empty extTableSelectionBean.selectionItems}">
+                <rich:list type="unordered" value="#{extTableSelectionBean.selectionItems}" var="sel">
                     <h:outputText value="#{sel.vendor} - #{sel.model} - #{sel.price}"/>
-                </r:list>
-            </r:panel>
-        </r:outputPanel>
+                </rich:list>
+            </rich:panel>
+        </a4j:outputPanel>
     </h:panelGrid>
 </ui:composition>

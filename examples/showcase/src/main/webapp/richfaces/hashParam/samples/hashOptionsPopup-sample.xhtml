@@ -23,11 +23,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
 
-    <r:popupPanel id="pp" resizeable="true" header="Popup panel shown using r:componentControl and r:hashParam">
+    <rich:popupPanel id="pp" resizeable="true" header="Popup panel shown using rich:componentControl and rich:hashParam">
         <f:facet name="controls">
-            <h:outputLink value="#" onclick="#{r:component('pp')}.hide(); return false;">
+            <h:outputLink value="#" onclick="#{rich:component('pp')}.hide(); return false;">
                 X
             </h:outputLink>
         </f:facet>
@@ -44,9 +44,9 @@
         </h:panelGrid>
         <p>The panel is getting centered by using:</p>
 
-        <p>&lt;r:param noEscape="true" name="left" value="(window.width/2)-250"/&gt;</p>
+        <p>&lt;rich:param noEscape="true" name="left" value="(window.width/2)-250"/&gt;</p>
 
-        <p>&lt;r:param noEscape="true" name="top" value="(window.height/2)-150"/&gt;</p>
+        <p>&lt;rich:param noEscape="true" name="top" value="(window.height/2)-150"/&gt;</p>
         <fieldset>
             <legend>
                 <b>NOTE:</b>
@@ -54,20 +54,20 @@
             <p>Notice that the show() api method requires an event parameter to be first according to signature. So we
                 passed it before the hashParam.</p>
         </fieldset>
-    </r:popupPanel>
+    </rich:popupPanel>
 
     <h:commandButton value="Show popup">
-        <r:componentControl target="pp" operation="show">
-            <r:param noEscape="true" value="event" />
-            <r:hashParam>
+        <rich:componentControl target="pp" operation="show">
+            <a4j:param noEscape="true" value="event" />
+            <rich:hashParam>
                 <f:param name="width" value="500" />
                 <f:param name="height" value="300" />
                 <f:param name="minWidth" value="300" />
                 <f:param name="minHeight" value="150" />
-                <r:param noEscape="true" name="left" value="(jQuery(window).width()/2)-250" />
-                <r:param noEscape="true" name="top" value="(jQuery(window).height()/2)-150" />
-            </r:hashParam>
-        </r:componentControl>
+                <a4j:param noEscape="true" name="left" value="(jQuery(window).width()/2)-250" />
+                <a4j:param noEscape="true" name="top" value="(jQuery(window).height()/2)-150" />
+            </rich:hashParam>
+        </rich:componentControl>
     </h:commandButton>
 
 </ui:composition>

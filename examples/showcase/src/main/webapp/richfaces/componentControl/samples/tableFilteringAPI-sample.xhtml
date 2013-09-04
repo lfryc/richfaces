@@ -23,7 +23,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org" xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j" xmlns:fn="http://java.sun.com/jsp/jstl/functions">
     <h:outputStylesheet>
         .atop {
         vertical-align: top;
@@ -31,27 +31,27 @@
     </h:outputStylesheet>
     <h:form id="form">
         <h:panelGrid columns="2" columnClasses="atop">
-            <r:panel>
+            <rich:panel>
                 <f:facet name="header">
                     <h:outputText value="Quick Filter Panel" />
                 </f:facet>
                 <fieldset>
                     <legend>Filter By Vendor</legend>
                     <ul>
-                        <r:repeat value="#{carsBean.allVendors}" var="vendor">
+                        <a4j:repeat value="#{carsBean.allVendors}" var="vendor">
                             <li><h:outputLink value="#">#{vendor}
-                                    <r:componentControl target="table" operation="filter" event="click">
+                                    <rich:componentControl target="table" operation="filter" event="click">
                                         <f:param value="vendor" />
                                         <f:param value="#{vendor}" />
-                                    </r:componentControl>
+                                    </rich:componentControl>
                                 </h:outputLink>
                             </li>
-                        </r:repeat>
+                        </a4j:repeat>
                     </ul>
                 </fieldset>
-            </r:panel>
-            <r:dataTable value="#{carsBean.allInventoryItems}" var="car" id="table" rows="20">
-                <r:column id="vendor" filterValue="#{carsFilteringBean.vendorFilter}"
+            </rich:panel>
+            <rich:dataTable value="#{carsBean.allInventoryItems}" var="car" id="table" rows="20">
+                <rich:column id="vendor" filterValue="#{carsFilteringBean.vendorFilter}"
                     filterExpression="#{carsFilteringBean.vendorFilter == '' or carsFilteringBean.vendorFilter == null or carsFilteringBean.vendorFilter == car.vendor}">
                     <f:facet name="header">
                         <h:panelGroup>
@@ -59,47 +59,47 @@
                         </h:panelGroup>
                     </f:facet>
                     <h:outputText value="#{car.vendor}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Model" />
                     </f:facet>
                     <h:outputText value="#{car.model}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:outputText value="Price" />
                     </f:facet>
                     <h:outputText value="#{car.price}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:panelGroup>
                             <h:outputText value="Mileage" />
                         </h:panelGroup>
                     </f:facet>
                     <h:outputText value="#{car.mileage}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:panelGroup>
                             <h:outputText value="Days Live" />
                         </h:panelGroup>
                     </f:facet>
                     <h:outputText value="#{car.daysLive}" />
-                </r:column>
-                <r:column>
+                </rich:column>
+                <rich:column>
                     <f:facet name="header">
                         <h:panelGroup>
                             <h:outputText value="VIN " />
                         </h:panelGroup>
                     </f:facet>
                     <h:outputText value="#{car.vin}" />
-                </r:column>
+                </rich:column>
                 <f:facet name="footer">
-                    <r:dataScroller />
+                    <rich:dataScroller />
                 </f:facet>
-            </r:dataTable>
+            </rich:dataTable>
         </h:panelGrid>
     </h:form>
 </ui:composition>

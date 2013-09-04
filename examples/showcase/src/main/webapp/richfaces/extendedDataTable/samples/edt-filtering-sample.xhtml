@@ -27,17 +27,18 @@
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 
-                xmlns:r="http://richfaces.org"
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:a4j="http://richfaces.org/a4j"
                 xmlns:fn="http://java.sun.com/jsp/jstl/functions">
     <h:form>
-        <r:messages/>
-        <r:extendedDataTable value="#{carsBean.allInventoryItems}"
+        <rich:messages/>
+        <rich:extendedDataTable value="#{carsBean.allInventoryItems}"
                                 var="car" id="table" frozenColumns="2"
                                 style="height:300px; width:500px;" selectionMode="none">
             <f:facet name="noData">
                 Nothing found
             </f:facet>
-            <r:column filterValue="#{carsFilteringBean.vendorFilter}"
+            <rich:column filterValue="#{carsFilteringBean.vendorFilter}"
                          filterExpression="#{fn:containsIgnoreCase(car.vendor, carsFilteringBean.vendorFilter)}"
                          filterType="custom">
                 <f:facet name="header">
@@ -45,19 +46,19 @@
                         <h:outputText value="Vendor "/>
                         <h:selectOneMenu value="#{carsFilteringBean.vendorFilter}">
                             <f:selectItems value="#{carsBean.vendorOptions}"/>
-                            <r:ajax render="table" execute="@this" event="change"/>
+                            <a4j:ajax render="table" execute="@this" event="change"/>
                         </h:selectOneMenu>
                     </h:panelGroup>
                 </f:facet>
                 <h:outputText value="#{car.vendor}"/>
-            </r:column>
-            <r:column>
+            </rich:column>
+            <rich:column>
                 <f:facet name="header">
                     <h:outputText value="Model"/>
                 </f:facet>
                 <h:outputText value="#{car.model}"/>
-            </r:column>
-            <r:column filter="#{carsFilteringBean.mileageFilterImpl}" width="150px"
+            </rich:column>
+            <rich:column filter="#{carsFilteringBean.mileageFilterImpl}" width="150px"
                          filterType="custom">
                 <f:facet name="header">
                     <h:panelGroup>
@@ -65,25 +66,25 @@
                         <h:inputText value="#{carsFilteringBean.mileageFilter}" label="Mileage Filter">
                             <f:convertNumber groupingUsed="true"/>
                             <f:validateLongRange maximum="500000"/>
-                            <r:ajax event="blur" render="table" execute="@this"/>
+                            <a4j:ajax event="blur" render="table" execute="@this"/>
                         </h:inputText>
                     </h:panelGroup>
                 </f:facet>
                 <h:outputText value="#{car.mileage}"/>
-            </r:column>
-            <r:column filterValue="#{carsFilteringBean.vinFilter}" width="150px"
+            </rich:column>
+            <rich:column filterValue="#{carsFilteringBean.vinFilter}" width="150px"
                          filterExpression="#{fn:containsIgnoreCase(car.vin,carsFilteringBean.vinFilter)}"
                          filterType="custom">
                 <f:facet name="header">
                     <h:panelGroup>
                         <h:outputText value="VIN "/>
                         <h:inputText value="#{carsFilteringBean.vinFilter}" label="VIN Filter">
-                            <r:ajax event="blur" render="table" execute="@this"/>
+                            <a4j:ajax event="blur" render="table" execute="@this"/>
                         </h:inputText>
                     </h:panelGroup>
                 </f:facet>
                 <h:outputText value="#{car.vin}"/>
-            </r:column>
-        </r:extendedDataTable>
+            </rich:column>
+        </rich:extendedDataTable>
     </h:form>
 </ui:composition>

@@ -23,7 +23,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich">
     <h:outputStylesheet>
         .rf-ac {
         width: 500px;
@@ -34,15 +34,15 @@
         }
     </h:outputStylesheet>
     <h:form>
-        <r:accordion switchType="client">
-            <r:accordionItem header="Overview:">
+        <rich:accordion switchType="client">
+            <rich:accordionItem header="Overview:">
                 <h:graphicImage value="/images/icons/common/rf.png" style="float:right" alt="rf" />
                 RichFaces is a component library for JSF and an advanced framework for
                 easily integrating AJAX capabilities into business applications.
                 <ul>
                     <li>100+ AJAX enabled components in two libraries</li>
-                    <li>r: page centric AJAX controls</li>
-                    <li>r: self contained, ready to use components</li>
+                    <li>rich: page centric AJAX controls</li>
+                    <li>rich: self contained, ready to use components</li>
                     <li>Whole set of JSF benefits while working with AJAX</li>
                     <li>Skinnability mechanism</li>
                     <li>Component Development Kit (CDK)</li>
@@ -51,8 +51,8 @@
                     <li>Broad cross-browser support</li>
                     <li>Large and active community</li>
                 </ul>
-            </r:accordionItem>
-            <r:accordionItem header="JSF 2 and RichFaces 4:">
+            </rich:accordionItem>
+            <rich:accordionItem header="JSF 2 and RichFaces 4:">
                 <p>We are working hard on RichFaces 4.0 which will have full JSF 2 integration. That is not all though, here
                     is a summary of updates and features:</p>
                 <ul>
@@ -65,7 +65,7 @@
                     <li>Both server-side and client-side performance optimization.</li>
                     <li>Strict code clean-up and review.</li>
                 </ul>
-            </r:accordionItem>
-        </r:accordion>
+            </rich:accordionItem>
+        </rich:accordion>
     </h:form>
 </ui:composition>

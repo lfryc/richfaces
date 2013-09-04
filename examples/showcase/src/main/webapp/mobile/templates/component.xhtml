@@ -25,25 +25,26 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       
       xmlns:fn="http://java.sun.com/jsp/jstl/functions"
-      xmlns:r="http://richfaces.org"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:a4j="http://richfaces.org/a4j"
       xmlns:c="http://java.sun.com/jsp/jstl/core">
-<r:outputPanel id="component" ajaxRendered="true" >
+<a4j:outputPanel id="component" ajaxRendered="true" >
   <h:outputStylesheet>
         .navigation .rf-tab-hdr-brd,.navigation .rf-tab {
         display: none;
         }
     </h:outputStylesheet>
 <div>
-    <r:tabPanel switchType="client" styleClass="navigation" activeItem="#{demoNavigator.currentSample.id}"
+    <rich:tabPanel switchType="client" styleClass="navigation" activeItem="#{demoNavigator.currentSample.id}"
         onbeforeitemchange="return false;">
         <c:forEach items="#{demoNavigator.currentDemo.samples}" var="s">
-            <r:tab header="#{s.name}" name="#{s.id}"
+            <rich:tab header="#{s.name}" name="#{s.id}"
                 onheaderclick="document.location.href='#{facesContext.externalContext.requestContextPath}/richfaces/mobile-component-sample.jsf?demo=#{demoNavigator.currentDemo.id}&amp;sample=#{s.id}&amp;skin=#{skinBean.skin}'" />
         </c:forEach>
-    </r:tabPanel>
+    </rich:tabPanel>
     <fieldset class="example-cnt" >
         <ui:include src="#{demoNavigator.sampleURI}" />
     </fieldset>
  </div>
-</r:outputPanel>
+</a4j:outputPanel>
 </ui:composition>

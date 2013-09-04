@@ -23,9 +23,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich">
     <h:form id="form">
-        <r:dataTable keepSaved="true" id="richTable" var="record" value="#{personBean.dataModel}" rows="20">
+        <rich:dataTable keepSaved="true" id="richTable" var="record" value="#{personBean.dataModel}" rows="20">
             <ui:include src="jpaColumn.xhtml">
                 <ui:param name="bean" value="#{personBean}" />
                 <ui:param name="property" value="name" />
@@ -40,8 +40,8 @@
             </ui:include>
 
             <f:facet name="footer">
-                <r:dataScroller id="scroller" />
+                <rich:dataScroller id="scroller" />
             </f:facet>
-        </r:dataTable>
+        </rich:dataTable>
     </h:form>
 </ui:composition>

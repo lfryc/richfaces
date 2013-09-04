@@ -22,7 +22,7 @@
 
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
 
     <div style="position: relative; height: 140px">
         <h:panelGrid columns="2" columnClasses="wfcol1">
@@ -36,9 +36,9 @@
             <h:outputText value="#{profile.notes}" />
         </h:panelGrid>
         <div class="navPanel">
-            <r:commandButton value="&lt;&lt;Previous" style="float:left">
-                <r:toggleControl targetItem="@prev" event="click" />
-            </r:commandButton>
+            <a4j:commandButton value="&lt;&lt;Previous" style="float:left">
+                <rich:toggleControl targetItem="@prev" event="click" />
+            </a4j:commandButton>
         </div>
     </div>
 

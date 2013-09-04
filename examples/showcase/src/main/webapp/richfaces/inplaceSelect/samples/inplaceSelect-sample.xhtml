@@ -23,23 +23,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" 
-    xmlns:r="http://richfaces.org">
+    xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
     <h:form>
         <p>In the example below click on the label to edit the value and click somewhere outside the component to store this
             value.</p>
-        <r:panel style="width:220px;">
+        <rich:panel style="width:220px;">
             <f:facet name="header">
                 <h:outputText value="Simples select"></h:outputText>
             </f:facet>
-            <r:inplaceSelect defaultLabel="Click here to edit" openOnEdit="true">
+            <rich:inplaceSelect defaultLabel="Click here to edit" openOnEdit="true">
                 <f:selectItem itemValue="0" itemLabel="Option 1" />
                 <f:selectItem itemValue="1" itemLabel="Option 2" />
                 <f:selectItem itemValue="2" itemLabel="Option 3" />
                 <f:selectItem itemValue="3" itemLabel="Option 4" />
                 <f:selectItem itemValue="4" itemLabel="Option 5" />
-            </r:inplaceSelect>
-        </r:panel>
-        <r:outputPanel rendered="#{not (userAgent.phone || userAgent.tablet)}">
+            </rich:inplaceSelect>
+        </rich:panel>
+        <a4j:outputPanel rendered="#{not (userAgent.phone || userAgent.tablet)}">
         <p>In the next example we have customized the component in the following ways:</p>
         <ul>
             <li><b>f:selectItems</b> tag is used to define a list of items to use.</li>
@@ -50,15 +50,15 @@
             <li><b>saveOnBlur</b> is set to 'false' so that the value will not be stored unless until the "save" button is
                 clicked. This could be useful on pages where every change could cause extended processing.</li>
         </ul>
-        <r:panel style="width:220px;">
+        <rich:panel style="width:220px;">
             <f:facet name="header">
                 <h:outputText value="Select customization"></h:outputText>
             </f:facet>
-            <r:inplaceSelect editEvent="dblclick" id="inplaceSelect" showControls="true" saveOnSelect="false"
+            <rich:inplaceSelect editEvent="dblclick" id="inplaceSelect" showControls="true" saveOnSelect="false"
                 saveOnBlur="false" value="#{inplaceSelectBean.value}" defaultLabel="Double click to edit value">
                 <f:selectItems value="#{inplaceSelectBean.capitalsOptions}" />
-            </r:inplaceSelect>
-        </r:panel>
-        </r:outputPanel>
+            </rich:inplaceSelect>
+        </rich:panel>
+        </a4j:outputPanel>
     </h:form>
 </ui:composition>
