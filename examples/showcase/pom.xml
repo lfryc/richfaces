@@ -25,11 +25,18 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+<!--     <parent> -->
+<!--         <groupId>org.richfaces</groupId> -->
+<!--         <artifactId>richfaces-parent</artifactId> -->
+<!--         <version>5.0.0-SNAPSHOT</version> -->
+<!--         <relativePath>../../pom.xml</relativePath> -->
+<!--     </parent> -->
+
     <parent>
-        <groupId>org.richfaces</groupId>
-        <artifactId>richfaces-parent</artifactId>
-        <version>5.0.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
+        <groupId>org.richfaces.ui</groupId>
+        <artifactId>richfaces-ui-parent</artifactId>
+        <version>4.5.0-SNAPSHOT</version>
+<!--         <relativePath>../../parent/pom.xml</relativePath> -->
     </parent>
 
     <groupId>org.richfaces.examples</groupId>
@@ -38,7 +45,7 @@
     <name>RichFaces Showcase</name>
 
     <properties>
-        <version.richfaces>5.0.0-SNAPSHOT</version.richfaces>
+<!--         <version.richfaces>5.0.0-SNAPSHOT</version.richfaces> -->
         <version.richfaces.ui>4.5.0-SNAPSHOT</version.richfaces.ui>
         <dependency.scope>compile</dependency.scope>
         <container.classifier>tomcat6</container.classifier>
@@ -61,20 +68,20 @@
     <dependencyManagement>
         <dependencies>
             <!-- RichFaces BOM Import -->
-            <dependency>
-                <groupId>org.richfaces</groupId>
-                <artifactId>richfaces-bom</artifactId>
-                <version>${version.richfaces}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces</groupId>
-                <artifactId>richfaces-build</artifactId>
-                <version>${version.richfaces}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+<!--             <dependency> -->
+<!--                 <groupId>org.richfaces</groupId> -->
+<!--                 <artifactId>richfaces-bom</artifactId> -->
+<!--                 <version>${version.richfaces}</version> -->
+<!--                 <type>pom</type> -->
+<!--                 <scope>import</scope> -->
+<!--             </dependency> -->
+<!--             <dependency> -->
+<!--                 <groupId>org.richfaces</groupId> -->
+<!--                 <artifactId>richfaces-build</artifactId> -->
+<!--                 <version>${version.richfaces}</version> -->
+<!--                 <type>pom</type> -->
+<!--                 <scope>import</scope> -->
+<!--             </dependency> -->
         </dependencies>
     </dependencyManagement>
 
@@ -84,95 +91,77 @@
 <!--             <artifactId>richfaces</artifactId> -->
 <!--         </dependency> -->
         <dependency>
-                <groupId>org.richfaces.ui.common</groupId>
-                <artifactId>richfaces-ui-common-api</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.common</groupId>
-                <artifactId>richfaces-ui-common-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.core</groupId>
-                <artifactId>richfaces-ui-core-api</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.core</groupId>
-                <artifactId>richfaces-ui-core-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.iteration</groupId>
-                <artifactId>richfaces-ui-iteration-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.iteration</groupId>
-                <artifactId>richfaces-ui-iteration-api</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.output</groupId>
-                <artifactId>richfaces-ui-output-api</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.output</groupId>
-                <artifactId>richfaces-ui-output-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.misc</groupId>
-                <artifactId>richfaces-ui-misc-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.input</groupId>
-                <artifactId>richfaces-ui-input-api</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.input</groupId>
-                <artifactId>richfaces-ui-input-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.validator</groupId>
-                <artifactId>richfaces-ui-validator-api</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.validator</groupId>
-                <artifactId>richfaces-ui-validator-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.dnd</groupId>
-                <artifactId>richfaces-ui-dnd-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui.dnd</groupId>
-                <artifactId>richfaces-ui-dnd-api</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui</groupId>
-                <artifactId>richfaces-components-api</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui</groupId>
-                <artifactId>richfaces-components-ui</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.richfaces.ui</groupId>
-                <artifactId>static-resources</artifactId>
-                <version>${version.richfaces.ui}</version>
-            </dependency>
+            <groupId>org.richfaces.ui.common</groupId>
+            <artifactId>richfaces-ui-common-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.common</groupId>
+            <artifactId>richfaces-ui-common-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.core</groupId>
+            <artifactId>richfaces-ui-core-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.core</groupId>
+            <artifactId>richfaces-ui-core-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.iteration</groupId>
+            <artifactId>richfaces-ui-iteration-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.iteration</groupId>
+            <artifactId>richfaces-ui-iteration-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.output</groupId>
+            <artifactId>richfaces-ui-output-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.output</groupId>
+            <artifactId>richfaces-ui-output-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.misc</groupId>
+            <artifactId>richfaces-ui-misc-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.input</groupId>
+            <artifactId>richfaces-ui-input-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.input</groupId>
+            <artifactId>richfaces-ui-input-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.validator</groupId>
+            <artifactId>richfaces-ui-validator-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.validator</groupId>
+            <artifactId>richfaces-ui-validator-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.dnd</groupId>
+            <artifactId>richfaces-ui-dnd-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui.dnd</groupId>
+            <artifactId>richfaces-ui-dnd-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-components-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-components-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>static-resources</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.jboss.spec.javax.servlet</groupId>
             <artifactId>jboss-servlet-api_3.0_spec</artifactId>
@@ -477,6 +466,7 @@
                     <plugin>
                         <groupId>org.jboss.as.plugins</groupId>
                         <artifactId>jboss-as-maven-plugin</artifactId>
+                        <version>7.1.1.Final</version>
                         <configuration>
                             <filename>richfaces-showcase-jbas71.war</filename>
                         </configuration>
