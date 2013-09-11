@@ -7,8 +7,6 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
@@ -24,7 +22,7 @@ public class AutocompleteBean implements Serializable {
         return people;
     }
 
-    public Collection<Person> suggest(FacesContext facesContext, UIComponent component, final String prefix) {
+    public Collection<Person> suggest(final String prefix) {
         return Collections2.filter(people, new Predicate<Person>() {
             @Override
             public boolean apply(Person input) {
