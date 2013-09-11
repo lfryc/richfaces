@@ -32,8 +32,8 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.event.AjaxBehaviorEvent;
 
+import org.richfaces.component.AbstractExtendedDataTable;
 import org.richfaces.demo.tables.model.cars.InventoryItem;
-import org.richfaces.ui.iteration.extendedDataTable.AbstractExtendedDataTable;
 
 @ManagedBean
 @ViewScoped

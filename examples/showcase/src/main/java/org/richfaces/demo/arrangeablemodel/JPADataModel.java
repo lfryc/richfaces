@@ -38,7 +38,6 @@ import org.richfaces.model.DataVisitor;
 import org.richfaces.model.ExtendedDataModel;
 import org.richfaces.model.Range;
 import org.richfaces.model.SequenceRange;
-//import org.richfaces.ui.iteration.SortOrder;
 import org.richfaces.model.Arrangeable;
 import org.richfaces.model.ArrangeableState;
 import org.richfaces.model.FilterField;

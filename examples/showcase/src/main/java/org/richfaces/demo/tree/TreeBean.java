@@ -33,11 +33,11 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.swing.tree.TreeNode;
 
+import org.richfaces.component.AbstractTree;
 import org.richfaces.demo.tree.model.CD;
 import org.richfaces.demo.tree.model.Company;
 import org.richfaces.demo.tree.model.Country;
-import org.richfaces.ui.iteration.tree.AbstractTree;
-import org.richfaces.ui.iteration.tree.TreeSelectionChangeEvent;
+import org.richfaces.event.TreeSelectionChangeEvent;
 
 /**
  * @author Ilya Shaikovsky

@@ -25,7 +25,7 @@ package org.richfaces.demo.panelmenu;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-import org.richfaces.ui.toggle.ItemChangeEvent;
+import org.richfaces.event.ItemChangeEvent;
 
 @ManagedBean
 @RequestScoped
